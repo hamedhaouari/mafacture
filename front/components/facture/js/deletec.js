@@ -9,11 +9,13 @@ export var deletec = Vue.extend({
 				this.prop.delete().then((resp) => {
 					console.log(resp)
 					setTimeout( () => $(".modal").modal('hide'), 500 )
-					
+
 					})
 
 				.catch((err) => {
 					console.error(err);
+					alert("Impossible de supprimer ce client"); 
+
 			});
 		}
 	},
